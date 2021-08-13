@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   height: 100em;
   background-color: rgb(243, 243, 243);
@@ -7,7 +13,7 @@ body {
 /* below style is for header part */
 
 header {
-  height: 200px;
+  height: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +29,7 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.856);
+  background-color: rgba(255, 255, 255, 0.925);
 }
 
 #logo > img {
@@ -31,7 +37,6 @@ header {
   position: relative;
   bottom: 10px;
   left: 20px;
-  
 }
 
 .icon {
@@ -53,7 +58,6 @@ header {
   flex-grow: 2;
   position: relative;
   bottom: 10px;
-
 }
 
 input {
@@ -62,6 +66,8 @@ input {
   border-width: 1px;
   font-size: large;
   padding-left: 1em;
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.925);
 }
 
 button {
@@ -89,13 +95,13 @@ button:hover {
   background-color: rgb(226, 225, 225);
 }
 
-input:focus{
+input:focus {
   outline: none;
   border-width: 1px;
   border-color: rgb(50, 137, 252);
 }
 
-#voicesearch{
+#voicesearch {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,11 +116,11 @@ input:focus{
   border-width: 0px;
 }
 
-#voicesearch > img{
+#voicesearch > img {
   height: 20px;
 }
 
-#profile{
+#profile {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -124,6 +130,172 @@ input:focus{
   bottom: 10px
 }
 
-.icon_left{
+.icon_left {
   height: 25px;
 }
+/* Main section design */
+
+main { 
+  min-height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+}
+/* main section with the main video content */
+
+main > section {
+  min-height: 100vh;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+/* aside section wiht the main playlist of sugested videos */
+
+main > aside {
+  min-height: 100vh;
+  width: 35%;
+}
+
+.button-container {
+  height: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.category-button {
+  font-size: 16px;
+  font-weight: lighter;
+  border-radius: 16px;
+  height: fit-content;
+  width: fit-content;
+  padding: 7px;
+  background-color: rgb(226, 225, 225);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(216, 216, 216);;
+}
+
+.category-button:hover {
+  background-color: rgb(206, 206, 206);;
+}
+
+#all {
+  background-color: black;
+  color: white;
+}
+
+aside > .playlist {
+  height: 97%;
+}
+
+.sugested-conteiner {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 10px;
+  }
+
+.details > p {
+  font-size: 12px;
+  color: rgb(119, 119, 119);
+  }
+
+.details > h4 {
+  margin-bottom: 10px;
+}
+
+/* main video and comments section */
+.main-video {
+  min-height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments_section {
+  min-height: 70%;
+}
+
+.main-video > iframe {
+  width: 90%;
+  min-height: 80%;  
+}
+
+.discription {
+  width: 100%;
+  padding-left: 39px;
+  height: 20%;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: rgb(119, 119, 119);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.viewer-section {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: rgb(119, 119, 119);
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.vido-discription {
+  padding-top: 10px;
+}
+.vido-discription > h2 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.hashtags {
+  font-size: 13px;
+  color: rgb(45, 145, 238);
+}
+
+.viewer-section > nav {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  justify-self: flex-end;
+}
+
+.viewer-section > nav > a {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.viewer-section > nav > a > h3 {
+  margin-left: 5px;
+  color: rgb(119, 119, 119); 
+}
+
+
+
+
